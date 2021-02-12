@@ -25,7 +25,7 @@ def generate_config(context):
                      [{'type': 'compute.v1.instance',
                        'name': context['velo_edge_name'],
                        'properties': {
-                           'zone': 'us-west1-a',
+                           'zone': context['gcp_zone'],
                            'machineType': ''.join([COMPUTE_URL_BASE, 'projects/',
                                                    context['gcp_project_id'], '/zones/',
                                                    context['gcp_zone'], '/machineTypes/',
